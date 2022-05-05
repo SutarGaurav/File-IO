@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FileIOHomework
+namespace FileIOHomework.May052022
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace FileIOHomework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new EmployeeForm());
         }
     }
 }
