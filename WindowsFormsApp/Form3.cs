@@ -75,7 +75,8 @@ namespace WindowsFormsApp
                 BinaryWriter bw = new BinaryWriter(fs);
                 bw.Write(id);                
                 bw.Write(nm);
-                bw.Write(lctn);                
+                bw.Write(lctn);
+                bw.Close();
                 MessageBox.Show("Done!");
             }
             catch(Exception ex)
