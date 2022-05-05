@@ -73,10 +73,9 @@ namespace WindowsFormsApp
                 string lctn = txtLocation.Text;
                 fs = new FileStream(@"D:\TestFolder\FirstFile.txt", FileMode.Create, FileAccess.Write);
                 BinaryWriter bw = new BinaryWriter(fs);
-                bw.Write(id);
+                bw.Write(id);                
                 bw.Write(nm);
-                bw.Write(lctn);
-                bw.Close();
+                bw.Write(lctn);                
                 MessageBox.Show("Done!");
             }
             catch(Exception ex)
