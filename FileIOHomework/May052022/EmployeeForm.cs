@@ -46,10 +46,10 @@ namespace FileIOHomework.May052022
             {
                 fs = new FileStream(@"D:\TestFolder\SecondFile.txt", FileMode.Create, FileAccess.Write);
                 BinaryWriter bw = new BinaryWriter(fs);
-                bw.Write(byte.Parse(txtEmpID.Text));
+                bw.Write(uint.Parse(txtEmpID.Text));
                 bw.Write(txtEmpName.Text);
                 bw.Write(txtEmpDesg.Text);
-                bw.Write(int.Parse(txtEmpSal.Text));
+                bw.Write(uint.Parse(txtEmpSal.Text));
                 bw.Write(txtEmpDep.Text);
                 bw.Close();
                 MessageBox.Show("Done!");
@@ -70,10 +70,10 @@ namespace FileIOHomework.May052022
             {
                 fs = new FileStream(@"D:\TestFolder\SecondFile.txt", FileMode.Open, FileAccess.Read);
                 BinaryReader br = new BinaryReader(fs);
-                txtEmpID.Text = br.ReadByte().ToString();
+                txtEmpID.Text = br.ReadUInt32().ToString();
                 txtEmpName.Text = br.ReadString();
                 txtEmpDesg.Text = br.ReadString();
-                txtEmpSal.Text = br.ReadInt32().ToString();
+                txtEmpSal.Text = br.ReadUInt32().ToString();
                 txtEmpDep.Text = br.ReadString();
                 br.Close();
             }
