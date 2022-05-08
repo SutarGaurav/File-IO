@@ -29,7 +29,6 @@ namespace FileIOHomework.May062022
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -46,8 +45,7 @@ namespace FileIOHomework.May062022
             this.btnXmlRead = new System.Windows.Forms.Button();
             this.btnJsonWrite = new System.Windows.Forms.Button();
             this.btnJsonRead = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -96,12 +94,11 @@ namespace FileIOHomework.May062022
             // 
             // txtId
             // 
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Cursor = System.Windows.Forms.Cursors.No;
+            this.txtId.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtId.Location = new System.Drawing.Point(163, 37);
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(275, 28);
+            this.txtId.Size = new System.Drawing.Size(275, 35);
             this.txtId.TabIndex = 4;
             // 
             // txtName
@@ -133,111 +130,132 @@ namespace FileIOHomework.May062022
             this.btnBinaryWrite.BackColor = System.Drawing.Color.White;
             this.btnBinaryWrite.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnBinaryWrite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBinaryWrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBinaryWrite.ForeColor = System.Drawing.Color.Black;
             this.btnBinaryWrite.Location = new System.Drawing.Point(480, 32);
             this.btnBinaryWrite.Name = "btnBinaryWrite";
-            this.btnBinaryWrite.Size = new System.Drawing.Size(110, 40);
+            this.btnBinaryWrite.Size = new System.Drawing.Size(120, 40);
             this.btnBinaryWrite.TabIndex = 8;
             this.btnBinaryWrite.Text = "Binary Write";
             this.btnBinaryWrite.UseVisualStyleBackColor = false;
+            this.btnBinaryWrite.Click += new System.EventHandler(this.btnBinaryWrite_Click);
             // 
             // btnBinaryRead
             // 
             this.btnBinaryRead.BackColor = System.Drawing.Color.White;
             this.btnBinaryRead.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnBinaryRead.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnBinaryRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBinaryRead.ForeColor = System.Drawing.Color.Black;
-            this.btnBinaryRead.Location = new System.Drawing.Point(608, 32);
+            this.btnBinaryRead.Location = new System.Drawing.Point(635, 32);
             this.btnBinaryRead.Name = "btnBinaryRead";
-            this.btnBinaryRead.Size = new System.Drawing.Size(110, 40);
+            this.btnBinaryRead.Size = new System.Drawing.Size(125, 40);
             this.btnBinaryRead.TabIndex = 9;
             this.btnBinaryRead.Text = "Binary Read";
             this.btnBinaryRead.UseVisualStyleBackColor = false;
+            this.btnBinaryRead.Click += new System.EventHandler(this.btnBinaryRead_Click);
             // 
             // btnSoapWrite
             // 
             this.btnSoapWrite.BackColor = System.Drawing.Color.White;
             this.btnSoapWrite.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSoapWrite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSoapWrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSoapWrite.ForeColor = System.Drawing.Color.Black;
             this.btnSoapWrite.Location = new System.Drawing.Point(480, 77);
             this.btnSoapWrite.Name = "btnSoapWrite";
-            this.btnSoapWrite.Size = new System.Drawing.Size(110, 40);
+            this.btnSoapWrite.Size = new System.Drawing.Size(120, 40);
             this.btnSoapWrite.TabIndex = 10;
             this.btnSoapWrite.Text = "Soap Write";
             this.btnSoapWrite.UseVisualStyleBackColor = false;
+            this.btnSoapWrite.Click += new System.EventHandler(this.btnSoapWrite_Click);
             // 
             // btnSoapRead
             // 
             this.btnSoapRead.BackColor = System.Drawing.Color.White;
             this.btnSoapRead.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSoapRead.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnSoapRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSoapRead.ForeColor = System.Drawing.Color.Black;
-            this.btnSoapRead.Location = new System.Drawing.Point(608, 77);
+            this.btnSoapRead.Location = new System.Drawing.Point(635, 77);
             this.btnSoapRead.Name = "btnSoapRead";
-            this.btnSoapRead.Size = new System.Drawing.Size(110, 40);
+            this.btnSoapRead.Size = new System.Drawing.Size(125, 40);
             this.btnSoapRead.TabIndex = 11;
             this.btnSoapRead.Text = "Soap Read";
             this.btnSoapRead.UseVisualStyleBackColor = false;
+            this.btnSoapRead.Click += new System.EventHandler(this.btnSoapRead_Click);
             // 
             // btnXmlWrite
             // 
             this.btnXmlWrite.BackColor = System.Drawing.Color.White;
             this.btnXmlWrite.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnXmlWrite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnXmlWrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXmlWrite.ForeColor = System.Drawing.Color.Black;
             this.btnXmlWrite.Location = new System.Drawing.Point(480, 122);
             this.btnXmlWrite.Name = "btnXmlWrite";
-            this.btnXmlWrite.Size = new System.Drawing.Size(110, 40);
+            this.btnXmlWrite.Size = new System.Drawing.Size(120, 40);
             this.btnXmlWrite.TabIndex = 12;
             this.btnXmlWrite.Text = "XML Write";
             this.btnXmlWrite.UseVisualStyleBackColor = false;
+            this.btnXmlWrite.Click += new System.EventHandler(this.btnXmlWrite_Click);
             // 
             // btnXmlRead
             // 
             this.btnXmlRead.BackColor = System.Drawing.Color.White;
             this.btnXmlRead.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnXmlRead.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnXmlRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXmlRead.ForeColor = System.Drawing.Color.Black;
-            this.btnXmlRead.Location = new System.Drawing.Point(608, 122);
+            this.btnXmlRead.Location = new System.Drawing.Point(635, 122);
             this.btnXmlRead.Name = "btnXmlRead";
-            this.btnXmlRead.Size = new System.Drawing.Size(110, 40);
+            this.btnXmlRead.Size = new System.Drawing.Size(125, 40);
             this.btnXmlRead.TabIndex = 13;
             this.btnXmlRead.Text = "XML Read";
             this.btnXmlRead.UseVisualStyleBackColor = false;
+            this.btnXmlRead.Click += new System.EventHandler(this.btnXmlRead_Click);
             // 
             // btnJsonWrite
             // 
             this.btnJsonWrite.BackColor = System.Drawing.Color.White;
             this.btnJsonWrite.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnJsonWrite.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnJsonWrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJsonWrite.ForeColor = System.Drawing.Color.Black;
             this.btnJsonWrite.Location = new System.Drawing.Point(480, 167);
             this.btnJsonWrite.Name = "btnJsonWrite";
-            this.btnJsonWrite.Size = new System.Drawing.Size(110, 40);
+            this.btnJsonWrite.Size = new System.Drawing.Size(120, 40);
             this.btnJsonWrite.TabIndex = 14;
             this.btnJsonWrite.Text = "JSon Write";
             this.btnJsonWrite.UseVisualStyleBackColor = false;
+            this.btnJsonWrite.Click += new System.EventHandler(this.btnJsonWrite_Click);
             // 
             // btnJsonRead
             // 
             this.btnJsonRead.BackColor = System.Drawing.Color.White;
             this.btnJsonRead.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnJsonRead.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnJsonRead.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJsonRead.ForeColor = System.Drawing.Color.Black;
-            this.btnJsonRead.Location = new System.Drawing.Point(608, 167);
+            this.btnJsonRead.Location = new System.Drawing.Point(635, 167);
             this.btnJsonRead.Name = "btnJsonRead";
-            this.btnJsonRead.Size = new System.Drawing.Size(110, 40);
+            this.btnJsonRead.Size = new System.Drawing.Size(125, 40);
             this.btnJsonRead.TabIndex = 15;
             this.btnJsonRead.Text = "JSon Read";
             this.btnJsonRead.UseVisualStyleBackColor = false;
+            this.btnJsonRead.Click += new System.EventHandler(this.btnJsonRead_Click);
             // 
-            // panel1
+            // btnClear
             // 
-            this.panel1.Location = new System.Drawing.Point(54, 225);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 213);
-            this.panel1.TabIndex = 17;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnClear.Location = new System.Drawing.Point(480, 213);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.TabIndex = 16;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // ProductForm
             // 
@@ -245,8 +263,8 @@ namespace FileIOHomework.May062022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(779, 481);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(803, 281);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnJsonRead);
             this.Controls.Add(this.btnJsonWrite);
             this.Controls.Add(this.btnXmlRead);
@@ -268,7 +286,7 @@ namespace FileIOHomework.May062022
             this.Name = "ProductForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ProductForm";
+            this.Text = "Product Form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,7 +310,6 @@ namespace FileIOHomework.May062022
         private System.Windows.Forms.Button btnXmlRead;
         private System.Windows.Forms.Button btnJsonWrite;
         private System.Windows.Forms.Button btnJsonRead;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
