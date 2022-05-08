@@ -101,6 +101,13 @@
     <Compile Include="May052022\FormStudent.Designer.cs">
       <DependentUpon>FormStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="May062022\Book.cs" />
+    <Compile Include="May062022\BookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="May062022\BookForm.Designer.cs">
+      <DependentUpon>BookForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="May062022\ProductClass.cs" />
     <Compile Include="May062022\ProductForm.cs">
       <SubType>Form</SubType>
@@ -118,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="May052022\FormStudent.resx">
       <DependentUpon>FormStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="May062022\BookForm.resx">
+      <DependentUpon>BookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="May062022\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
