@@ -23,7 +23,7 @@ namespace FileIOHomework.May062022
             txtPrice.Clear();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnBinaryWrite_Click(object sender, EventArgs e)
         {
             try
             {
