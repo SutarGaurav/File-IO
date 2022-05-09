@@ -217,7 +217,7 @@ namespace FileIOHomework.May062022
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(623, 473);
+            this.ClientSize = new System.Drawing.Size(614, 473);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBinaryReader);

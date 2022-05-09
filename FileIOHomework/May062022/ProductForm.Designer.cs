@@ -263,7 +263,7 @@ namespace FileIOHomework.May062022
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(803, 281);
+            this.ClientSize = new System.Drawing.Size(803, 291);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnJsonRead);
             this.Controls.Add(this.btnJsonWrite);

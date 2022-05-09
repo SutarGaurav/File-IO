@@ -58,7 +58,6 @@ namespace FileIOHomework.May062022
                 fs.Close();
             }
         }
-
         private void btnClear_Click(object sender, EventArgs e)
         {
             txtBatchId.Clear();
